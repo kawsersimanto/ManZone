@@ -1,0 +1,10 @@
+fonts -
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; (light)
+  font-weight: 400; (regular)
+  font-weight: 500; (medium)
+  font-weight: 600; (semi-bold)
+
+reusable class -
+  container-1 for only navbar and banner
+  container-2 for through out the layout
