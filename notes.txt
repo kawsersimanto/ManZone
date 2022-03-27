@@ -10,6 +10,8 @@ reusable class -
   container-2 for through out the layout
 
 colors -
-  background-color : #202020
-  primary-color : #f0542d
-  text-color : #ffffff
+  $background-color : #202020
+  $primary-color : #f0542d
+  $text-color : #ffffff
+
+size - 3.1rem(title) , 1.4rem(paragraph), 1.8rem(buttons), 7.3rem(banner)

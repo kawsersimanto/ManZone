@@ -24,6 +24,7 @@
 
 .banner-title {
   @include poppins($banner, $semi-bold);
+  line-height: 8.1rem;
 }
 
 .dot {
@@ -31,13 +32,14 @@
 }
 
 .description {
-  padding-bottom: 50px;
+  padding: 0.9rem 0 2.1rem;
   @include poppins($paragraph, $light);
 }
 
 .button {
   padding: 0.9rem 2.5rem;
   font-size: 1.5rem;
+  color: $text-color;
   background-color: $primary-color;
   border: none;
   @include border(2px, transparent);
@@ -49,9 +51,5 @@
     background-color: transparent;
     @include border(2px, $primary-color);
     cursor: pointer;
-  }
-  a{
-    text-decoration: none;
-    color: $text-color;
   }
 }
