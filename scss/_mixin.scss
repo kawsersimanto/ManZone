@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin border {
+  border: 1px solid white;
+}
+
+@mixin flex($direction: space-between) {
+  display: flex;
+  align-items: center;
+  justify-content: $direction;
+}
+
+@mixin poppins($size:$paragraph , $weight:$regular) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $text-color;
+}

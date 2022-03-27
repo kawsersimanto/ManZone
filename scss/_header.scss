@@ -1,0 +1,51 @@
+@import "mixin";
+@import "variables";
+
+header{
+  background-color: $navbar-color;
+}
+
+.nav-bar {
+  padding: 2.8rem 10%;
+  width: 100%;
+  background-color: $navbar-color;
+  // @include border;
+  @include flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.brand-tilte {
+  min-width: 10%;
+  &:hover{
+    cursor: pointer;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+.nav-links {
+  ul{
+    @include flex;
+    // display: flex;
+    li{
+      list-style: none;
+      a{
+        padding: 0 3.1rem;
+        display: inline-block;
+        text-decoration: none;
+        color: $text-color;
+        transition: all 0.3s ease 0s;
+        &:last-child{
+          padding-right: 0;
+        }
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

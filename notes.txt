@@ -8,3 +8,8 @@ fonts -
 reusable class -
   container-1 for only navbar and banner
   container-2 for through out the layout
+
+colors -
+  background-color : #202020
+  primary-color : #f0542d
+  text-color : #ffffff
