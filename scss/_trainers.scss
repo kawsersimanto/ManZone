@@ -1,9 +1,6 @@
 @import "mixin";
 @import "variables";
 
-.trainers {
-}
-
 .trainers-content {
   padding-bottom: 10rem;
 }
@@ -11,10 +8,6 @@
 .title {
   padding: 5rem 0;
   @include poppins($title, $medium);
-}
-
-.dot {
-  font-size: $title;
 }
 
 .grid-container {

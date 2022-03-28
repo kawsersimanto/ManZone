@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixin";
+
+.session {
+  padding-bottom: 10rem;
+}
+
+.grid-container-2 {
+  grid-template-areas: "session-1 session-2 session-info";
+  gap: 1.9rem;
+}
+
+.session-1 {
+  grid-area: session-1;
+  @include background-img("../img/session-1.jpg");
+}
+
+.session-2 {
+  grid-area: session-2;
+  @include background-img("../img/session-2.jpg");
+}
+
+.session-info {
+  padding-left: 10px;
+  text-align: justify;
+  grid-area: session-info;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.session-title{
+  transform: translateY(-23%);
+  padding: 0;
+}
