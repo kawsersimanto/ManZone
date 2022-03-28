@@ -9,6 +9,10 @@
 @import "session";
 @import "branch";
 
+html{
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   padding: 0;

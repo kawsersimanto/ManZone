@@ -47,7 +47,7 @@
     text-align: center;
 }
 
-// name 
+// name tag
 @mixin name-tag {
   padding: 1.25rem 0;
   width: 100%;
@@ -56,4 +56,12 @@
   @include poppins(1.2rem, $medium);
   background-color: $light-black;
   backdrop-filter: blur(6px);
+}
+
+@mixin transition {
+  transition: all 0.3s ease 0s;
+}
+
+@mixin hover {
+  transform: translateY(-5%);
 }

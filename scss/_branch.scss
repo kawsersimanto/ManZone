@@ -13,14 +13,26 @@
 
 .branch-1 {
   @include grid-area-background(branch-1, "../img/new-york.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .branch-2 {
   @include grid-area-background(branch-2, "../img/denver.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .branch-3 {
   @include grid-area-background(branch-3, "../img/miami.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .branch-info {

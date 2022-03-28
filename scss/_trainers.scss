@@ -17,14 +17,26 @@
 
 .trainer-1{
   @include grid-area-background(trainer-1, "../img/trainer-1.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .trainer-2{
   @include grid-area-background(trainer-2, "../img/trainer-2.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .trainer-3{
   @include grid-area-background(trainer-3, "../img/trainer-3.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .trainer-name{

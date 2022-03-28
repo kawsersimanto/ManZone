@@ -13,10 +13,18 @@
 
 .session-1 {
   @include grid-area-background(session-1, "../img/session-1.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .session-2 {
   @include grid-area-background(session-2, "../img/session-2.jpg");
+  @include transition;
+  &:hover{
+    @include hover;
+  }
 }
 
 .session-info {
