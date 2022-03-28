@@ -16,9 +16,44 @@
   color: $text-color;
 }
 
+
+// grid container 
+
+@mixin grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 23.75rem;
+  grid-template-areas: "trainer-1 trainer-2 trainer-3";
+  gap: 3rem; 
+}
+
+// grid area background 
+
+@mixin grid-area-background($grid-area, $img-path) {
+  position: relative;
+  grid-area: $grid-area;
+  @include background-img($img-path);
+}
+
 @mixin background-img($url) {
   background-image: url($url);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+// align-center
+@mixin align-center {
+    text-align: center;
+}
+
+// name 
+@mixin name-tag {
+  padding: 1.25rem 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  @include poppins(1.2rem, $medium);
+  background-color: $light-black;
+  backdrop-filter: blur(6px);
 }

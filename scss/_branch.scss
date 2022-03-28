@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixin";
+
+.branch {
+  padding-bottom: 10rem;
+}
+
+.grid-container-3 {
+  @include grid-container;
+  grid-template-rows: 15rem;
+  grid-template-areas: "branch-1 branch-2 branch-3";
+}
+
+.branch-1 {
+  @include grid-area-background(branch-1, "../img/new-york.jpg");
+}
+
+.branch-2 {
+  @include grid-area-background(branch-2, "../img/denver.jpg");
+}
+
+.branch-3 {
+  @include grid-area-background(branch-3, "../img/miami.jpg");
+}
+
+.branch-info {
+  @include align-center;
+}
+
+.branch-name {
+  @include name-tag;
+}
