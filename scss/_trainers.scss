@@ -1,0 +1,56 @@
+@import "mixin";
+@import "variables";
+
+.trainers {
+}
+
+.trainers-content {
+  padding-bottom: 10rem;
+}
+
+.title {
+  padding: 5rem 0;
+  @include poppins($title, $medium);
+}
+
+.dot {
+  font-size: $title;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 23.75rem;
+  grid-template-areas: "trainer-1 trainer-2 trainer-3";
+  gap: 5rem;
+}
+
+.trainer-1{
+  position: relative;
+  grid-area: trainer-1;
+  @include background-img("../img/trainer-1.jpg");
+}
+.trainer-2{
+  position: relative;
+  grid-area: trainer-2;
+  @include background-img("../img/trainer-2.jpg");
+}
+.trainer-3{
+  position: relative;
+  grid-area: trainer-3;
+  @include background-img("../img/trainer-3.jpg");
+}
+
+.trainer-name {
+  text-align: center;
+}
+
+.name{
+  padding: 1.25rem 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  @include poppins(1.2rem, $medium);
+  background-color: $light-black;
+  backdrop-filter: blur(6px);
+}
