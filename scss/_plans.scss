@@ -1,0 +1,93 @@
+@import "variables";
+@import "mixin";
+
+.plans {
+  padding-bottom: 10rem;
+  background-color: #252525;
+}
+
+.grid-container-4 {
+  @include grid-container;
+  grid-template-rows: 40rem;
+  grid-template-areas: "card-1 card-2 card-3";
+  gap: 4rem;
+}
+
+.card-container {
+  // @include border(1px, $primary-color);
+  @include flex;
+  flex-direction: column;
+}
+
+.plan-info {
+  padding-bottom: 1rem;
+  li {
+    margin-bottom: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    list-style: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    p {
+      padding-left: 0.8rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.card-1 {
+  grid-area: card-1;
+}
+
+.card-2 {
+  grid-area: card-2;
+}
+
+.card-3 {
+  grid-area: card-3;
+}
+
+.card-1,
+.card-2,
+.card-3 {
+  background-color: $card-color;
+  @include border(2px, transparent);
+  @include transition;
+  z-index: 0;
+  &:hover {
+    @include border(2px, $primary-color);
+    z-index: 1;
+    box-shadow: 0 15px 60px $card-color;
+    transform: scale(1.05);
+  }
+}
+
+.sign {
+  min-width: 10%;
+  display: inline-block;
+  img {
+    width: 100%;
+  }
+}
+
+.card-title {
+  padding: 0;
+  padding-top: 2rem;
+  font-size: $button;
+  border-bottom: 1px solid $primary-color;
+}
+
+.price {
+  padding: 0;
+  padding-bottom: 2rem;
+  font-size: 60px;
+}
+
+.button-container {
+  padding-bottom: 2rem;
+}
+
+.subscription-button {
+  padding: $subscription-button;
+}
