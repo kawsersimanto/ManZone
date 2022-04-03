@@ -1,0 +1,75 @@
+@import "variables";
+@import "mixin";
+
+footer{
+  padding-bottom: 4rem;
+  background-color: $card-color;
+}
+
+
+.grid-container-6 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "quick-link service help-support subscribe-footer";
+}
+
+.quick-link {
+  grid-area: quick-link;
+}
+
+.footer-title{
+  font-size: 1.5rem;
+}
+
+.footer-links{
+  li{
+    list-style: none;
+    a{
+      margin: .8rem 0;
+      display: inline-block;
+      color: $text-color;
+      text-decoration: none;
+      @include transition;
+      &:hover{
+        color: $gray-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.footer-title {
+  padding-bottom: 5rem;
+}
+
+.service {
+  grid-area: service;
+}
+
+.help-support {
+  grid-area: help-support;
+}
+
+.subscribe-footer {
+  grid-area: subscribe-footer;
+}
+
+hr{
+  margin: 5rem auto;
+  width: 80%;
+}
+
+.branding{
+  @include flex;
+}
+
+.brand:hover{
+  cursor: pointer;
+}
+
+.social-links{
+  img:hover{
+    cursor: pointer;
+  }
+}
