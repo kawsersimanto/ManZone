@@ -1,0 +1,199 @@
+@import "responsive-mixins";
+@import "mixin";
+@import "variables";
+
+
+@mixin laptop-large {
+  @media screen and (max-width:1600px) {
+
+  .nav-bar{
+    padding: 2.8rem 5%;
+  }
+
+  .nav-bar.sticky{
+    padding: 1rem 5%;
+  }
+
+  .container{
+    padding: 0 5%;
+  }
+}
+
+}
+
+@mixin tablet {
+  @media screen and (max-width:1080px){
+
+    .nav-bar{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .nav-links{
+      display: none;
+      width: 100%;
+      ul{
+        width: 100%;
+        flex-direction: column;
+        li{
+          text-align: center;
+          display: inline-block;
+          width: 100%;
+          @include transition;
+          &:hover{
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .nav-links.display{
+      display: flex;
+    }
+
+    .toggle-button.display {
+      .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .bar:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+      }
+      .bar:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+      }
+    }
+
+    .toggle-button{
+      display: flex;
+    }
+
+    .banner-title {
+      padding-top: 18%;
+      font-size: 6rem;
+      line-height: 8.1rem;
+    }
+
+    .title{
+      text-align: center
+    }
+    @include trainers();
+    @include sessions();
+    @include branches();
+    @include plans();
+    @include contact();
+    @include footer();
+  } 
+}
+
+@mixin mobile {
+  @media screen and (max-width:600px){
+
+    .grid-container-2{
+      gap: 2rem;
+    }
+
+    .session-title {
+      padding-top: 4rem;
+      transform: translateY(0);
+    }
+
+    .description {
+      text-align: left;
+    }
+
+    .grid-container-4{
+      grid-template-columns: .8fr;
+    }
+
+    .grid-container-6{
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: "quick-link" "service" "help-support" "subscribe-footer";
+    }
+  
+    .quick-link{
+      grid-area: quick-link;
+    }
+    .service{
+      grid-area: service;
+    }
+    .help-support{
+      grid-area: help-support;
+    }
+    .subscribe-footer{
+      grid-area: subscribe-footer;
+    }
+    .email2{
+      align-items: center;
+    }
+  } 
+}
+
+@mixin mobile-small {
+  @media screen and (max-width:538px){
+    .banner-title {
+      font-size: 5rem;
+    }
+  }
+}
+
+@mixin mobile-medium-small {
+  @media screen and (max-width:450px){
+    .banner-title {
+      padding-top: 50%;
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+    .session-title{
+      padding-top: 8rem;
+    }
+  }
+}
+
+@mixin mobile-medium {
+  @media screen and (max-width:400px){
+    .email input {
+      padding: 1.5rem 0 1.5rem 1.25rem;
+    }
+    .subscribe-btn {
+      min-width: 18rem;
+    }
+  } 
+}
+
+@mixin mobile-extra-small {
+  @media screen and (max-width:360px){
+    .container{
+      padding: 0 3%;
+    }
+    .email input {
+      // padding: 1.5rem 0 1.5rem 1.25rem;
+      min-width: 19rem;
+    }
+    .subscribe-btn {
+      padding: 0.5rem 7.1rem;;
+    }
+  
+    .session-title {
+      padding-top: 9rem;
+    }
+  
+    .button{
+      font-size: 1rem;
+    }
+  
+    .social-icon img {
+      width: 80%;
+    }
+  
+    .social-medias{
+      ul{
+        li{
+          p{
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  
+  }
+}

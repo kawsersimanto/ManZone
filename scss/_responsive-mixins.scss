@@ -1,0 +1,151 @@
+// mixins 
+@mixin responsive-grid {
+  grid-template-columns: 0.7fr;
+  grid-template-rows: repeat(3, 20rem);
+  justify-content: center;
+}
+
+@mixin area-backposition($area, $position:top) {
+  grid-area: $area;
+  background-position: $position;
+}
+
+
+@mixin trainers {
+
+  .grid-container{
+    @include responsive-grid();
+    grid-template-areas: "trainer-1" "trainer-2" "trainer-3";
+  }
+  .trainer-1{
+    @include area-backposition(trainer-1);
+  }
+  .trainer-2{
+    @include area-backposition(trainer-2);
+  }
+  .trainer-3{
+    @include area-backposition(trainer-3);
+  }
+
+}
+
+@mixin sessions {
+  .session-info{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container-2{
+    @include responsive-grid();
+    grid-template-areas: "session-1" "session-2" "session-info";
+  }
+
+  .session-1{
+    @include area-backposition(session-1);
+  }
+
+  .session-2{
+    @include area-backposition(session-2);
+  }
+
+  .session-info{
+    @include area-backposition(session-info);
+  }
+}
+
+@mixin branches {
+  .grid-container-3{
+    @include responsive-grid();
+    grid-template-areas: "branch-1" "branch-2" "branch-3";
+  }
+
+  .branch-1{
+    @include area-backposition(branch-1);
+  }
+
+  .branch-2{
+    @include area-backposition(branch-2);
+  }
+
+  .branch-3{
+    @include area-backposition(branch-3);
+  }
+}
+
+@mixin plans {
+  .grid-container-4{
+    grid-template-columns: 0.5fr;
+    grid-template-rows: repeat(3, 1.5fr);
+    grid-template-areas: "card-1" "card-2" "card-3";
+    justify-content: center;
+  }
+
+  .card-1{
+    @include area-backposition(card-1);
+  }
+
+  .card-2{
+    @include area-backposition(card-2);
+  }
+
+  .card-3{
+    @include area-backposition(card-3);
+  }
+}
+
+@mixin contact {
+  .grid-container-5{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "map-img" "contact";
+  }
+
+  .map-img{
+    @include area-backposition(map-img);
+  }
+
+  .contact{
+    padding-top: 2rem;
+    padding-left: 0;
+    @include area-backposition(contact);
+    align-items: center;
+  }
+
+  .subscribe-btn {
+    padding: 0.5rem 6.5rem;
+  }
+}
+
+@mixin footer {
+  .grid-container-6{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "quick-link service" "help-support subscribe-footer";
+    // justify-content: center;
+    text-align: center;
+  }
+
+  .quick-link{
+    grid-area: quick-link;
+  }
+  .service{
+    grid-area: service;
+  }
+  .help-support{
+    grid-area: help-support;
+  }
+  .subscribe-footer{
+    grid-area: subscribe-footer;
+  }
+  
+  .branding{
+    flex-direction: column;
+  }
+
+  .copyright{
+    small{
+      margin: 1rem 0;
+      display: inline-block;
+    }
+  }
+}

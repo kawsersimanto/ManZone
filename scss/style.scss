@@ -12,6 +12,10 @@
 @import "subscribe";
 @import "footer";
 
+// responsiveness
+@import "responsive";
+
+// basic styling 
 html{
   scroll-behavior: smooth;
 }
@@ -43,3 +47,11 @@ body{
   transform: translateY(0px);
   opacity: 1;
 }
+
+@include laptop-large;
+@include tablet;
+@include mobile;
+@include mobile-small;
+@include mobile-medium-small();
+@include mobile-medium();
+@include mobile-extra-small();
