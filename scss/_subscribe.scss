@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixin";
+
+.subscribe {
+  padding-bottom: 5rem;
+}
+
+.grid-container-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "map contact";
+}
+
+.map-img {
+  grid-area: map;
+  min-width: 100%;
+  min-height: 100%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.contact{
+  background-color: $light-black;
+  padding-left: 5rem;
+  @include flex(center);
+  align-items: flex-start;
+  flex-direction: column;
+  grid-area: contact;
+}
+
+.email {
+  @include flex(space-between);
+  align-items: flex-start;
+  flex-direction: column;
+  input{
+    margin-bottom: 1.25rem;
+    padding: 1.5rem 0 1.5rem 1.25rem;
+    font-size: 1.25rem;
+    min-width: 20rem;
+    background-color: transparent;
+    border: none;
+    @include border(2px, $primary-color);
+    &:focus{
+      outline: none;
+      color: $primary-color;
+      font-size: 1.25rem;
+    }
+  }
+  input::placeholder{
+    font-size: 1.5rem;
+    color: $primary-color;
+    opacity: 0.2;
+  }
+}
+
+.social-medias {
+  margin-top: 1.25rem;
+  ul{
+    li{
+      p{
+        font-size: 1.5rem;
+        color: $gray-color;
+      }
+    }
+  }
+}
+
+.links {
+  padding: 1.25rem 0;
+  li{
+    align-items: center;
+  }
+}
+
+.social-icon{
+  min-width: 5%;
+  img{
+    width: 100%;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}
